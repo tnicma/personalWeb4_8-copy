@@ -153,7 +153,7 @@ header{
 
 
 .homePage {
-    background-image: url('../images/bg.jpg');
+    background-image: url('../images/bg1.jpg');
     height: 620px;
     width: 100%;
     background-color: #000;
@@ -165,6 +165,7 @@ header{
     height: 100%;
     width: 100%;
     padding-bottom: 10%;
+    padding-top: 10%;
 }
 .glasses {
     text-align: center;
@@ -180,22 +181,16 @@ header{
     font-family: 'Gobold';
     color: #000;
     font-size: 2em;
-    margin-top: -3%;
+    margin-top: 1%;
 }
 .glasses img {
-    height: 40%;
-    width: 40%;
+    height: 55%;
+    width: 55%;
 }
 
 /*******************************************/
 /*********** about styling *****************/
 /*******************************************/
-
-#about {
-    position: absolute;
-    left: 0;
-    top: 620px;
-}
 
 #who {
     position: absolute;
@@ -206,20 +201,40 @@ header{
     height: 550px;
     width: 100%;
     padding-bottom: 10%;
-    background-color: #fff;
+    background-color: #b1182d;
     background-size: 100%;
     background-repeat: no-repeat;
-    margin-left: 0;
+    margin: 0 auto;
     color: #000;
     font-family: 'Cicle', fantasy;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease; 
-    position: relative;
-
 }
 
+#resume {
+    font-family: 'GoBold';
+    border: 1px solid #fff;
+    padding: 5px;
+            -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    text-align: center;
+}
+
+#resume:hover {
+    font-family: 'GoBold';
+    border: 1px solid #b1182d;
+    color: #b1182d;
+    padding: 5px;
+    background: #fff;
+        -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
 .sectionTitle{
     float: right;
     font-family: 'GoBold';
@@ -233,82 +248,37 @@ header{
 
 
 .aboutContent{
-    margin-left: 55px;
     margin-top: 100px;
-    position: absolute;
-    left: 65px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 3%;
-    display: table-row-group;
+    display: block;
     font-size: 1em;
 }
 
-.aboutContent p {
-    padding-left: 3%;
-    color: #6b1525;
+.aboutContent img{
+    height: 30%;
+    width: 30%;
 }
 
+#selfie {
+    float: left;
+}
 .general {
     float: left;
-    width: 300px;
-    padding-right: 20px;
-    overflow: hidden;
-    border: 1px solid 6b1525;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;    
-
-}
-
-.skills {
-    float: left;
-    width: 300px;
-    padding-right: 20px;
-    border: 1px solid 6b1525;
+    width: 50%;
+    xpadding-left: 20px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-
+    color: #fff;
 }
 
-.skills ul li{
-    display: inline-block;
-    padding: 3px;
-    color: #6b1525;
+.general ul li {
+    list-style: square;
 }
 
-.interests {
-    float: left;
-    width: 300px;
-    xpadding-right: 20px;
-    border: 1px solid 6b1525;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-    
-}
-
-.thumbnail {
-    color: #000;
-    background-color: ;
-    height: 500px;
-    border: 3px solid #6b1525;
-}
-
-.thumbnail img {
-    width: 45%;
-    padding-left: 30%;
-    padding-top: 15px;
-}
-
-.caption h3 {
-    font-family: 'DJB Angel Baby';
-    font-size: 2em;
-    margin-bottom: -15px;
-    color: #6b1525;
-}
 
 
 /*******************************************/
@@ -316,15 +286,21 @@ header{
 /*******************************************/
 #portfolio {
     position: absolute;
-    top: 1300px;
+    top: 625px;
+}
+
+#invisible {
+    position: relative;
+    height: 50px;
+    width: 1px;
 }
 .folio {
-    max-height: 800px;
-    min-height: 800px;
+    height: 780px;
+    height: 760px;
     width: 100%;
-    background-image: url('/images/bgBottom.png');
+    background-image: url('/images/bgright.png');
     background-repeat: no-repeat;
-    background-position: -15px -5px;    
+    background-size: 115%; 
 }
 .container { 
     position: relative; 
@@ -340,7 +316,7 @@ header{
     margin:1%;
     padding: 0;
     list-style:none;
-    xposition: absolute;
+    xposition: relative;
     xleft: 690px;
     xmax-width: 100%;
     float: right;
@@ -625,7 +601,13 @@ label {
 	padding-top: 5px;
 	font-size: 1.4em;
     font-family: 'GoBold';
+    color: #888;
 }
+
+#cont {
+    color: #888; !important!;
+}
+
 #socialMedia {
     text-align: center;
     margin-top: -6%;
@@ -709,13 +691,6 @@ label {
  
     }
     
-    .skills {
-        width: 33%;
-    }
-    
-    .interests {
-        width: 30%;
-    }
     
     .sectionTitle {
         padding: 10px;
@@ -734,7 +709,7 @@ label {
     }
     
     #portfoliolist .portfolio {
-        width:48%;
+        width:35%;
         margin:1%;
     }        
     #ads {
@@ -749,13 +724,24 @@ label {
         padding: 0px;
     }
     
-    .folio {
-        height: 1020px;
-    }
-    
 }
 /* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 650px) and (max-width: 767px) {
+    #portfoliolist .portfolio {
+        width:40%;
+        margin:1%;
+    }     
+        
+    .folio {
+        height: 1200px;
+    }
+}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+    .general {
+        float: none;
+    }
+    
     .container {
         width: 70%;
     }
@@ -763,10 +749,7 @@ label {
     #ads {
         display:none;
     }
-    #portfoliolist .portfolio {
-        width:48%;
-        margin:1%;
-    }        
+    
     #ads {
         display:none;
     }
@@ -778,7 +761,7 @@ label {
         display: block;
         padding: 0px;
     }
-    
+
 }
 
 @media only screen and (min-width:718px) and (max-width: 787px) {
@@ -800,22 +783,6 @@ label {
         width: 30%;
         height: 400px;
         
-    }
-    
-    .skills {
-        width: 30%;
-        height: 400px;
-        
-    }
-    
-    .skills p {
-        display: none;
-    }
-    
-    .interests {
-        width: 30%;
-        height: 400px;
-       
     }
     
     .sectionTitle {
@@ -858,43 +825,18 @@ label {
     }
     
     .aboutContent {
-        position: relative;
+        xposition: relative;
 
     }
     .general {
-        width: 88%;
         height: 400px;
-        float: none;
+    
         padding: 15px;
-        display: flex;
    
     }
-    
-    
-    .skills {
-        width: 130%;
-        height: 400px;
-        float: none;
-        padding: 15px;
-    }
-    
-    .interests {
-        width: 130%;
-        height: 300px;
-        float: none;
-        padding: 15px;
-    }
-    
+
     .sectionTitle {
         padding: 10px;
-    }
-    
-    .thumbnail {
-        height: 100%;
-    }
-    
-    .thumbnail img {
-        width: 10%;
     }
     
     #contact-area {
@@ -918,3 +860,11 @@ label {
         width: 50px;
         padding: 20px;
     }
+}
+
+@media only screen and (max-width: 480px) {
+    #portfoliolist .portfolio {
+        width:35%;
+        margin:1%;
+    }
+}
