@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, user-scalable=yes"> 
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link href="contactengine.php">
+<link href="contactthanks.php">    
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.mixitup.min.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -80}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+    
+    $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+
+
+    <title> Tiffany Mackins</title>
+
+    <!-- Behavioral Meta Data -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+<div class="wrapper"> 
+<header>
+    
+<nav class="brandBox">   
+    <div class="logo"> 
+    <a href="#"> <img alt="Brand" src="images/logo.svg"></a>
+    
+    </div> <!-- logo box-->
+    <div class="clearfix"></div>
+    <section class="centerNav">
+    <ul class="nav">    
+                <li> <a href="#contact">Contact</a></li>
+                <li> <a href="#portfolio">Portfolio</a></li>
+                <li> <a href="#who">About</a></li>
+                <li> <a href="#home">Home</a></li>
+     </ul><!-- nav UL -->
+     <div class="clearfix"></div>
+    </section>
+    
+
+
+    
+<section class="navContent">
+    <ul>    
+                <li> <a href="#contact">Contact</a></li>
+                <li> <a href="#portfolio">Portfolio</a></li>
+                <li> <a href="#who">About</a></li>
+                <li> <a href="#home">Home</a></li>
+     </ul>
+    </section>
+<div class="mobileNav"><a id="menuToggle" href="#"><span></span></a>  
+</div> 
+</nav>     
+</header>
+
+<div class="homePage" id="home">
+    <section class="homeContent">
+        <div class="glasses">
+        <img src="images/glasses.svg">
+        <h1> Tiffany Mackins</h1>
+        <h2> Front-End Developer &amp; Designer </h2> 
+        </div>
+    </section>
+    
+</div><!-- homepage div -->
+
+<!-- about page --> 
+
+<div class="aboutPage">
+<section id="who"></section> 
+    
+<span class="sectionTitle"> About </span> <br> 
+    
+<div class="clearfix"></div>    
+<section class="aboutContent">
+ <section class="general">
+    <div class="thumbnail">
+    <img src="images/redAbout.png" alt="...">
+      <div class="caption">
+        <h3>General</h3>
+          <p>Hi, I'm Tiffany! I am a front-end web designer currently in a Master's program at Elon University in Interactive Media. I completed my undergrad at UNC-Chapel Hill in International Studies with a minor is Spanish. I love designing and developing websites. I also strive to teach myself new techniques in order to continue honing my craft.</p>       </div> <!-- caption -->
+    </div> <!-- thumbnail -->
+    </section> <!-- general -->
+    
+    <section class="skills">
+    <div class="thumbnail">
+    <img src="images/redSkills.png" alt="...">
+      <div class="caption">
+        <h3>Skills</h3>
+          <p>After five years of working full time in customer service, I have acquired excellent customer soft skills. I can easily switching between being customer-facing and being in the background. I also have an eye for design and knack for technology. Here are a few of my skills: </p>
+          <ul>
+          <li>HTML/CSS</li>
+          <li>Responsive Design</li>
+          <li>Wireframing</li>      
+          <li>Photoshop</li>      
+          <li>Adobe Premiere</li>
+          <li>InDesign</li>
+          <li>Bootstrap</li>
+          <li>Wordpress</li>
+          <li>Simple JavaScript</li>          
+          </ul>
+               
+        </div> <!-- caption -->
+    </div> <!-- thumbnail -->
+    </section> <!-- skills -->
+    
+    <section class="interests">
+    <div class="thumbnail">
+    <img src="images/redInterest.png" alt="...">
+      <div class="caption">
+        <h3>Interests</h3>
+          <p> Tech. Food. Traveling. Reading. Movies. Trends. Art. History. Music. Puppies. Romance Languages. Programming Languages.</p>           </div> <!-- caption -->
+    </div> <!-- thumbnail -->
+    </section><!-- interests-->
+      
+</section>                       
+</div> <!-- about div -->
+<div class="clearfix"></div>
+    
+    
+<div class="folio">
+<section id="portfolio"></section>
+    <span class="sectionTitle"> Portfolio </span>
+<div class="clearfix"></div>
+    
+<div class="container">
+
+		<ul id="filters" class="clearfix">
+			<li><span class="filter active" data-filter="web photo graphic logo ">All</span></li>
+			<li><span class="filter" data-filter="web">Web</span></li>
+			<li><span class="filter" data-filter="graphic">Graphic</span></li>
+			<li><span class="filter" data-filter="photo">Photo &amp; Video</span></li>
+
+		</ul><br><BR>
+
+		<div id="portfoliolist"><div class="clearfix"></div>
+			
+			<div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">				
+					<img src="thumbnails/hogar.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+                            <label class="text-title btn" for="modal-1">Hogar Cotui RD</label>
+							<span class="text-category">Web</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            
+    <input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-1"></label>
+    <h2>Hogar Cotui RD</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" />Served as the Project Manager for a client in the Dominican Republic. As the Project Manager, I delegated tasks, was also the liason for our contact who only spoke Spanish, as well as assisted with developing and design of the page. <a href="http://www.en.hogarcotui.org" target="_blank"> Visit Site.</a>  </p>
+  </div>
+</div>
+            
+            <div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">				
+					<img src="thumbnails/chan.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<label class="text-title btn" for="modal-2">Personal Website</label>
+							<span class="text-category">Web</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+            
+    <input class="modal-state" id="modal-2" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-2"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-2"></label>
+    <h2>Personal Website for Teacher and Musician</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" />Designed and developed personal website for client. Still in developement.  <a href="http://www.en.hogarcotui.org" target="_blank"> Visit Site.</a>  </p>
+  </div>
+</div>
+            <div class="portfolio web" data-cat="web">
+				<div class="portfolio-wrapper">				
+					<img src="thumbnails/capstone.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<label class="text-title btn" for="modal-3">Interative Infographic</label>
+							<span class="text-category">Web</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+    <input class="modal-state" id="modal-3" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-3"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-3"></label>
+    <h2>Interactive Infographic</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" />Designed and developed an interactive infographic using Edge Animate. Infographic uses JSON also.  <a href="http://www.en.hogarcotui.org" target="_blank"> Visit Site.</a>  </p>
+  </div>
+</div>        
+    
+            <div class="portfolio graphic" data-cat="graphic">
+				<div class="portfolio-wrapper">
+					<img src="thumbnails/chops.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<label class="text-title btn" for="modal-4">Interface Design</label>
+							<span class="text-category">Graphic</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>		
+            
+        <input class="modal-state" id="modal-4" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-4"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-4"></label>
+    <h2>Interactive Infographic</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" />Designed and developed an interactive infographic using Edge Animate. Infographic uses JSON also.  <a href="http://www.en.hogarcotui.org" target="_blank"> Visit Site.</a>  </p>
+  </div>
+</div> 
+            <div class="portfolio graphic" data-cat="graphic">
+				<div class="portfolio-wrapper">
+					<img src="thumbnails/led.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<label class="text-title btn" for="modal-5">Infographic</label>
+							<span class="text-category">Graphic</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+<input class="modal-state" id="modal-5" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-5"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-5"></label>
+    <h2>Infographic</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" /> Infographic about the anatomy of the LED utilizing Adobe Illustrator.  <a href="http://www.en.hogarcotui.org" target="_blank"> Visit Infographic Here.</a>  </p>
+  </div>
+</div> 
+            
+            <div class="portfolio graphic" data-cat="graphic">
+				<div class="portfolio-wrapper">
+					<img src="thumbnails/tripImp.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<label class="text-title btn" for="modal-6">Motion Graphic</label>
+							<span class="text-category">Graphic</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+    <input class="modal-state" id="modal-6" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-6"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-6"></label>
+    <h2>Motion Graphic Map</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" /> I created this map as part of a project I created with a partner. The project placed 2nd in the Triple Impact competition in which competitors pitch a product idea. I used Adobe Illustrator and After Effects to create the map.  <a href="http://www.en.hogarcotui.org" target="_blank"> See entire video here.</a>  </p>
+  </div>
+</div> 
+            
+            <div class="portfolio photo" data-cat="photo">
+				<div class="portfolio-wrapper">			
+					<img src="thumbnails/motion.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<label class="text-title btn" for="modal-7">Motion Typography</label>
+							<span class="text-category">Video</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+<input class="modal-state" id="modal-7" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-7"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-7"></label>
+    <h2>Motion Graphic Map</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" /> Motion typography project that brings part of Maya Angelou's Phenomenal Woman to life. I used Adobe Illustrator and Photoshop to create original graphics and After Effects to compile video.  <a href="http://www.en.hogarcotui.org" target="_blank"> See entire video here.</a>  </p>
+  </div>
+</div> 
+            
+            <div class="portfolio photo" data-cat="photo">
+				<div class="portfolio-wrapper">			
+					<img src="thumbnails/pictureStory.png" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<label class="text-title btn" for="modal-8">Audio Picture Story</label>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>	
+            											<input class="modal-state" id="modal-8" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-8"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-8"></label>
+    <h2>Audio Picture Story</h2>
+    <p><img src="http://i.imgur.com/HnrkBwB.gif" alt="" /> A video project featuring original photography of Granddaddy's Antigue Shop in Burlington NC. Adobe Premiere Pro and Lightroom were used.  <a href="http://www.en.hogarcotui.org" target="_blank"> See entire video here.</a>  </p>
+  </div>
+</div> 			
+         
+    </div>
+    </div>
+<div class="clearfix"></div>    
+
+</div><!-- folio div -->
+
+<div class="clearfix"></div> 
+<div class="contactPage">
+<section id="contact"></section>    
+<div class="clearfix"></div>
+<span class="sectionTitle"> Contact Me </span>  
+<div class="clearfix"></div>
+    
+<div id="contact-area">
+			
+			<form method="post" action="contactengine.php">
+				<label for="Name">Name</label>
+				<input type="text" name="Name" id="Name" />
+				
+				<label for="Email">Email</label>
+				<input type="text" name="Email" id="Email" />
+				
+				<label for="Message">Message</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+				<input type="submit" name="submit" value="Submit" class="submit-button" />
+			</form>
+			
+			<div style="clear: both;"></div>
+    
+</div><!-- contact area div -->
+        
+<section id="socialMedia">
+    <ul>
+    <li> <a href="behance"><img src="images/behance.png"></a> </li>
+    <li><a href="linkedin"><img src="images/linkedin.png"></a> </li>
+    <li><a href="twitter"><img src="images/twitter.png"></a></li>
+    </ul>
+    
+    
+</section> <!-- social media icons -->
+</div><!-- contact div -->    
+    
+    </div> <!-- wrapper div -->
+    
+
+<script>
+
+$( "#menuToggle" ).click(function() {
+  $( this ).toggleClass( "active");
+    $(".navContent").toggle(['500ms']);
+});
+
+</script>   
+</body>
+</html>
+
+

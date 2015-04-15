@@ -1,0 +1,36 @@
+#menuToggle span, #menuToggle span:before, #menuToggle span:after {
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#menuToggle span:before {
+  top: -10px;
+}
+#menuToggle span:after {
+  bottom: -10px; 
+}
+
+#menuToggle span, #menuToggle span:before, #menuToggle span:after {
+  transition: all 200ms ease-in-out;
+}
+#menuToggle.active span {
+  background-color: transparent;
+}
+#menuToggle.active span:before, #menuToggle.active span:after {
+  top: 0;
+}
+#menuToggle.active span:before {
+  transform: rotate(45deg);
+}
+#menuToggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+.navContent {
+    display: none;
+    transition: ease-in-out;
+}

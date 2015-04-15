@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+
+<div class="mobileNav"><a id="menuToggle" href="#"><span></span></a>  
+    
+<section class="navContent">
+    <ul>    
+                <li> <a href="#contact">Contact</a></li>
+                <li> <a href="#portfolio">Portfolio</a></li>
+                <li> <a href="#who">About</a></li>
+                <li> <a href="#home">Home</a></li>
+     </ul>
+    </section>
+</div>    
+
+<script>
+$( "#menuToggle" ).click(function() {
+  $( this ).toggleClass( "active");
+    $(".navContent").toggle(['500ms']);
+});
+</script>
+
+
+<!--
+$( "#menuToggle" ).click(function() {
+  $( this ).toggleClass( "active");
+});-->
