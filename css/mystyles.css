@@ -225,12 +225,12 @@ header{
 }
 
 .aboutPage {
-    height: 550px;
+    height: 100%;
     width: 100%;
     padding-bottom: 10%;
-    background-color: #b1182d;
+    xbackground-color: #b1182d;
+    background-image: url(/images/aboutBG.jpg);
     background-size: 100%;
-    background-repeat: no-repeat;
     margin: 0 auto;
     color: #000;
     font-family: 'Cicle', fantasy;
@@ -285,26 +285,52 @@ header{
 }
 
 #selfie {
-    float: left;
     max-width: 400px;
+    margin: auto;
+    margin: auto;
     position: relative;
     left: 10%;
 }
+    #selfie img {
+        width: 50%;
+        height: 50%;
+        
+    }
 
 .general {
-    xwidth: 50%;
+    width: 50%;
     padding-left: 20px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    color: #fff;
+    color: #b1182d;
+    position: relative;
+    left: 25%;
+}
+
+#blurb {
+    border: 2px solid #b1182d;
+    padding: 10px;
 }
 
 .general ul li {
-    list-style: square;
+    list-style: none;
+    border: 2px solid #b1182d;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
 }
 
+.general ul li:hover {
+    list-style: none;
+    border: 2px solid #fff;
+    background-color: #b1182d;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+}
 
 
 /*******************************************/
