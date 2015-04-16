@@ -98,15 +98,40 @@ header{
     position: fixed;
     right: 70px;
     top: 50px;
+    z-index: 900;
 }
 
 .navContent {
-    background-color: RGBa(123, 45, 3, 1);
-    height: 300px;
-    width: 175px;
+    background-color: RGBa(255, 255, 255, 1);
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    z-index: 300;
+    font-family: 'GoBold';
+    font-size: 1.2em;
+}
+
+.navContent ul li {
+    list-style: none;
+    float: none;
+    display: list-item;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.navContent ul li:hover {
+    background-color: #b1182d;
+}
+
+.navLine {
+    border: 1px solid #b1182d;
+    width: 5000px;
+    overflow-x: hidden;
     position: relative;
-    right: 70px;
-    top: 50px;
+    right: 40px;
 }
 
 #menuToggle span, #menuToggle span:before, #menuToggle span:after {
@@ -144,6 +169,8 @@ header{
 .navContent {
     display: none;
     transition: ease-in-out;
+    height: 300px;
+    width: 100%;
 }
 /*end nav styling*/
 
@@ -194,7 +221,7 @@ header{
 
 #who {
     position: absolute;
-    bottom: 780px;
+    top: 1380px;
 }
 
 .aboutPage {
@@ -235,39 +262,38 @@ header{
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
-.sectionTitle{
+.sectionTitle {
     float: right;
     font-family: 'GoBold';
     font-size: 4em;
     padding: 10px;
 }
 
-.caption h3 {
-    text-align: center;
-}
-
-
-.aboutContent{
+.aboutContent {
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 3%;
     display: block;
     font-size: 1em;
+    width: 960px;
 }
 
-.aboutContent img{
-    height: 30%;
-    width: 30%;
+.aboutContent img {
+    height: 70%;
+    width: 70%;
 }
 
 #selfie {
     float: left;
+    max-width: 400px;
+    position: relative;
+    left: 10%;
 }
+
 .general {
-    float: left;
-    width: 50%;
-    xpadding-left: 20px;
+    xwidth: 50%;
+    padding-left: 20px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -386,20 +412,28 @@ header{
     left:0;
 }
     
-.portfolio .label-text {
+.portfolio {
     color:#fff;
     position: relative;
     z-index:500;
     padding:5px 8px;
-}
-            
-.portfolio .text-category {
     display:block;
-    font-size:9px;
+}
+
+.label-text {
+    color:#fff;
+    position: relative;
+    z-index:500;
+    padding:5px 10px;
 }
 
 .text-title {
     color: #fff;
+}
+.text-category {
+    font-size: 1em;
+    font-family: 'Cicle', sans-serif;
+    display:block;
 }
 
 /* [Object] Modal
@@ -548,7 +582,7 @@ p img {
 /*********************************************/
 #contact {
     position: absolute;
-    top: 2120px;
+    top: 2060px;
 }
 .contactPage{
     height: 680px;
@@ -691,7 +725,6 @@ label {
  
     }
     
-    
     .sectionTitle {
         padding: 10px;
     }
@@ -726,6 +759,80 @@ label {
     
 }
 /* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 400px) and (max-width: 479px) {
+    
+    .homePage{
+        height: 500px;
+    }
+    
+    .homePage img {
+        height: 70%;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #portfoliolist .portfolio {
+        width:40%;
+        margin:1%;
+    }     
+        
+    .folio {
+        height: 900px;
+    }
+    
+    .container {
+        height: 
+    }
+    .aboutPage {
+        height: 100%;
+        width: 100%
+    }
+    
+    .aboutContent {
+        width: 100%;
+        height: 100%;
+
+    }
+    
+    .general {
+       float: none;
+       width: 100%;  
+    }
+    
+    #selfie {
+        float: none;
+        width: 300px;
+        padding: 0;
+    }
+    
+    #who {
+        position: relative;
+        top: -100px;
+    }
+    
+    #portfolio {
+        position: relative;
+        top: -100px;
+    }
+    
+    #contact {
+        position: relative;
+        top: -100px;
+    }
+}
+
+
+@media only screen and (min-width: 531px) and (max-width: 649px) {
+    #portfoliolist .portfolio {
+        width: 48%;
+        margin:1%;
+    }     
+        
+    .folio {
+        height: 1100px;
+    }
+}
+
 @media only screen and (min-width: 650px) and (max-width: 767px) {
     #portfoliolist .portfolio {
         width:40%;
@@ -738,9 +845,6 @@ label {
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     
-    .general {
-        float: none;
-    }
     
     .container {
         width: 70%;
@@ -761,6 +865,30 @@ label {
         display: block;
         padding: 0px;
     }
+/*
+    .aboutPage {
+        height: 100%;
+        width: 100%
+    }
+    
+    .aboutContent {
+        width: 730px;
+        height: 100%;
+        float: none;
+
+    }
+    
+    .general {
+       float: none;
+       width: 100%;  
+    }
+    
+    #selfie {
+        float: none;
+        width: 300px;
+        padding: 0;
+    }
+*/
 
 }
 
@@ -820,9 +948,11 @@ label {
     .mobileNav {
         display: block;
     }
+/*
     .aboutPage {
         height: 1255px;
     }
+*/
     
     .aboutContent {
         xposition: relative;
