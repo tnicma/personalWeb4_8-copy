@@ -449,7 +449,7 @@ header{
   text-align: left;
   background: rgba(0,0,0, .5);
   transition: opacity .25s ease-in-out;
-  z-index: 700;
+  z-index: 1700;
 }
 
 .modal__bg {
@@ -520,6 +520,11 @@ header{
 
 .modal__close:before {
   transform: rotate(-45deg);
+}
+
+.motion {
+    height: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
