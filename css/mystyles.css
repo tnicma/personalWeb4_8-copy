@@ -19,8 +19,8 @@
 }
 
 @font-face {
-  font-family: 'Cicle';
-  src: url('/fonts/Cicle Semi.ttf');
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf');
 }
 
 
@@ -89,6 +89,9 @@ header{
     background-color: #fff;
     width: 100%;
     z-index: 999;
+    box-shadow: 0px 2px 5px #333;
+    -webkit-box-shadow: 0px 2px 5px #333;
+    -moz-box-shadow: 0px 2px 5px #333;
 
 }
 
@@ -229,34 +232,38 @@ header{
     width: 100%;
     padding-bottom: 10%;
     xbackground-color: #b1182d;
-    background-image: url(/images/aboutBG.jpg);
+    background-image: url(/images/aboutBG.png);
+    background-repeat: repeat-y;
     background-size: 100%;
     margin: 0 auto;
     color: #000;
-    font-family: 'Cicle', fantasy;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease; 
+    font-family: 'Roboto', fantasy;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
 }
 
 #resume {
     font-family: 'GoBold';
-    border: 1px solid #fff;
+    border: 2px solid #b1182d;
+    color: #b1182d;
+    position: relative;
+    left: 20%;
     padding: 5px;
-            -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
     text-align: center;
 }
 
 #resume:hover {
     font-family: 'GoBold';
-    border: 1px solid #b1182d;
-    color: #b1182d;
+    border: 2px solid #b1182d;
+    color: #fff;
     padding: 5px;
-    background: #fff;
+    background: #b1182d;
         -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
@@ -304,7 +311,6 @@ header{
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    color: #b1182d;
     position: relative;
     left: 25%;
 }
@@ -317,19 +323,29 @@ header{
 .general ul li {
     list-style: none;
     border: 2px solid #b1182d;
+    background-color: #b1182d;
     display: inline-block;
     padding: 10px;
-    margin: 10px;
+    margin: 7px;
+    color: #fff;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
 }
 
 .general ul li:hover {
     list-style: none;
-    border: 2px solid #fff;
-    background-color: #b1182d;
+    border: 2px solid #b1182d;
+    background-color: #FFF;
     display: inline-block;
     padding: 10px;
     margin: 10px;
-    color: #fff;
+    color: #b1182d;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
 }
 
 
@@ -458,7 +474,7 @@ header{
 }
 .text-category {
     font-size: 1em;
-    font-family: 'Cicle', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display:block;
 }
 
@@ -639,6 +655,9 @@ p img {
     border: 0px;
 }
 
+#contact-area input{
+    font-family: 'Roboto', sans-serif;
+}
 #contact-area textarea {
 	height: 90px;
     background-color: RGBa(105, 18, 34, 1);
